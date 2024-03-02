@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<style>
+  #b1{
+    background-color: rgb(135, 170, 236);
+  }
+  #b2{
+    background-color: rgb(182, 236, 135);
+  }
+  </style>
+<body>
+    <h1 align="center">DOM Part-3 (ADD)</h1><br>
+
+    <div id="d1" align="center" style="background-color: rgb(175, 232, 213);">
+        <h2 id="reg">jQuery ADD Elements</h2>
+        <div id="d2">
+            <ul style="list-style-type: none; padding: 1em;">
+                <li>List 1</li>
+                <li>List 2</li>
+                <li>List 3</li>
+            </ul>
+        </div><br>
+        <button id="b1">Add List</button><br><br>
+
+        <p id="p1">1st Para</p>
+        <p id="p2">2nd Para</p>
+
+        <button id="b2">Add Para</button>
+    </div>
+
+    <!-- jQ ADD:
+    1) append() (Add content in the end)
+    2) prepend() (Add content in the beginning)
+    3) after() (Add content after selected)
+    4) before() (Add content before selected) -->
+
+    <script>
+        $(document).ready(function(){
+
+        //    $("#b1").click(function(){
+        //    $("ul").append("<li>New Text Append</li>");
+        //    });
+
+        //    $("#b2").click(function(){
+        //    $("ul").prepend("<li>New Text Prepend</li>");
+        //    });
+
+           $("#b2").click(function(){
+           $("#p1").after("<li>New Text after method</li>");
+           });
+
+           $("#b2").click(function(){
+           $("#p2").before("<li>New Text before method</li>");
+           });
+
+        });
+    </script>
+
+</body>
+</html>

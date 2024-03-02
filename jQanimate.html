@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<style>
+    #i1{
+        height: 39em;
+        position: relative;
+    }
+</style>
+<body>
+    <h1>Simple Animate</h1>
+    <img src="https://i.pinimg.com/736x/57/f1/3e/57f13ec1b6e2d5712d03fec842e08356.jpg" id="i1" alt="">
+    <script>
+        $(document).ready(function(){
+
+          $("#i1").click(function(){
+            var srs = $(this);
+          srs.animate({
+            left:'30em',
+            width:'49em',
+            opacity:'0.99',
+            height:'+=3em',
+            // width:'hide'
+          });
+          });
+
+        });
+    </script>
+
+</body>
+</html>
